@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup</title>
+  <style>
+    /* Style for the popup container */
+    .popup-container {
+      display: none; /* Hide the popup by default */
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    /* Style for the close button */
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="popup-container" id="popupContainer">
+  <!-- Content of the popup -->
+  <h2>Popup Content</h2>
+  <p>This is a simple popup.</p>
+  <!-- Close button -->
+  <span class="close-button" onclick="closePopup()">X</span>
+</div>
+
+<script>
+  // Function to close the popup
+  function closePopup() {
+    // Hide the popup container
+    document.getElementById('popupContainer').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
